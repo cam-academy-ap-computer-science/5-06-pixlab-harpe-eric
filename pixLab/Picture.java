@@ -218,7 +218,36 @@ public class Picture extends SimplePicture
       }
     }
   }
-  
+  /* public void edgeDetection(double amount) {
+	Pixel currPixel = null;
+	Pixel belowPixel = null;
+
+	int endY = this.getHeight() - 1;
+
+	// loop through y values from 0 to height - 1
+	for (int y = 0; y < endY; y++) {
+
+		// loop through the x values from 0 to width
+		for (int x = 0; x < this.getWidth(); x++) {
+
+			// get the top and bottom pixels
+			currPixel = this.getPixel(x, y);
+			belowPixel = this.getPixel(x, y + 1);
+
+			/*
+			 * get the color averages for the two pixels, check if the
+			 * absolute value of the difference is less than the amount
+			 */
+			if (Math.abs(currPixel.getAverage() - belowPixel.getAverage()) < amount)
+				currPixel.setColor(Color.WHITE);
+
+			// else set the color to black
+			else
+				currPixel.setColor(Color.BLACK);
+		}
+	}
+}
+*/
   
   /* Main method for testing - each class in Java can have a main 
    * method 
